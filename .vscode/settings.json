@@ -1,0 +1,7 @@
+{
+  "prettier.semi": false,
+  "prettier.tabWidth": 2,
+  "solidity.formatter": "prettier",
+  "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
+  "importSorter.sortConfiguration.removeUnusedImports": true
+}
