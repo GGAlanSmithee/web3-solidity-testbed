@@ -19,7 +19,11 @@ const Home: NextPage = () => {
   }, [web3, user])
 
   return (
-    <div className="flex flex-row justify-center mt-8">
+    <div className="flex flex-col items-center mt-8">
+      <div className="mb-8">
+        <p className="text-3xl">Web3 solidity testbed</p>
+      </div>
+
       <div className="underline text-sky-600 font-bold">
         <Link href="/examples/simple-storage">Simple Storage</Link>
       </div>
