@@ -3,6 +3,7 @@ import { useWeb3 } from "hooks/use-web3"
 import { useBlockchainUser } from "hooks/use-blockchain-user"
 import { useEffect, useState } from "react"
 import { useBlockchainStorage } from "hooks/use-blockchain-storage"
+import Link from "next/link"
 
 const Home: NextPage = () => {
   const web3 = useWeb3()
@@ -18,33 +19,10 @@ const Home: NextPage = () => {
   }, [web3, user])
 
   return (
-    <div className="flex flex-col items-center w-screen h-screen">
-      <header className="py-8 text-center">
-        <p className="text-3xl">Hello, Ethereum!</p>
-        <p className="text-xl">{user}</p>
-      </header>
-
-      <main>
-        <div>{balance && <div className="text-lg">Balance: {balance} ETH</div>}</div>
-
-        <div>Storage value: {storage.value}</div>
-
-        <div className="mt-4">
-          <input
-            className="border-2 rounded-md outline-none p-2"
-            type="number"
-            placeholder="Value"
-            value={storage.value || 0}
-            onChange={(e) => storage.setValue(Number(e.target.value))}
-          />
-          <button
-            className="border-2 rounded-md outline-none p-2 w-44 ml-2"
-            onClick={storage.commit}
-          >
-            Update Storage
-          </button>
-        </div>
-      </main>
+    <div className="flex flex-row justify-center mt-8">
+      <div className="underline text-sky-600 font-bold">
+        <Link href="/examples/simple-storage">Simple Storage</Link>
+      </div>
     </div>
   )
 }
