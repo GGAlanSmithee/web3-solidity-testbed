@@ -40,10 +40,10 @@ const useBlockchainContract = (web3: Web3 | undefined, contractJson: Dictionary<
   }, [web3, contractJson.abi, contractJson.networks])
 
   const call = useCallback(
-    async (method: string, ...args: any[]) => {
+    async (method: string, user: string, ...args: any[]) => {
       if (!contract) return
 
-      return await contract.methods[method](...args).call()
+      return await contract.methods[method](...args).call({ from: user })
     },
     [contract]
   )

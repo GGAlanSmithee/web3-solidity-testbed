@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from "react"
 import Web3 from "web3"
-import Storage from "contracts/Storage.json"
+import AddressStorage from "contracts/AddressStorage.json"
 import { useBlockchainContract } from "./use-blockchain-contract"
 import { useBlockchainUser } from "./use-blockchain-user"
 
-const useBlockchainStorage = (web3: Web3 | undefined) => {
+const useBlockchainAddressStorage = (web3: Web3 | undefined) => {
   const user = useBlockchainUser(web3)
-  const contract = useBlockchainContract(web3, Storage)
+  const contract = useBlockchainContract(web3, AddressStorage)
   const [value, setValue] = useState(0)
 
   useEffect(() => {
@@ -24,4 +24,4 @@ const useBlockchainStorage = (web3: Web3 | undefined) => {
   return { value, setValue, commit }
 }
 
-export { useBlockchainStorage }
+export { useBlockchainAddressStorage }

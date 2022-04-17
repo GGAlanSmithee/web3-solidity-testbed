@@ -27,6 +27,10 @@ const Home: NextPage = () => {
       <div className="underline text-sky-600 font-bold">
         <Link href="/examples/simple-storage">Simple Storage</Link>
       </div>
+
+      <div className="underline text-sky-600 font-bold">
+        <Link href="/examples/address-storage">Address Storage</Link>
+      </div>
     </div>
   )
 }
