@@ -3,5 +3,6 @@
   "prettier.tabWidth": 2,
   "solidity.formatter": "prettier",
   "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
-  "importSorter.sortConfiguration.removeUnusedImports": true
+  "importSorter.sortConfiguration.removeUnusedImports": true,
+  "solidity.packageDefaultDependenciesDirectory": "blockchain/node_modules"
 }
