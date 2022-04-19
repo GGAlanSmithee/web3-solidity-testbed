@@ -1,3 +1,8 @@
 {
-  "recommendations": ["JuanBlanco.solidity", "chunsen.bracket-select"]
+  "recommendations": [
+    "JuanBlanco.solidity",
+    "chunsen.bracket-select",
+    "mike-co.import-sorter",
+    "wmaurer.change-case"
+  ]
 }
