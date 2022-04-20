@@ -1,13 +1,31 @@
-const HelloWorld = artifacts.require("Storage")
+const Storage = artifacts.require("Storage")
 
-/*
- * uncomment accounts to access the test accounts made available by the
- * Ethereum client
- * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
- */
 contract("Storage", function (/* accounts */) {
-  it("should assert true", async function () {
-    await HelloWorld.deployed()
-    return assert.isTrue(true)
+  let storage
+
+  beforeEach(async () => {
+    storage = await Storage.deployed()
+  })
+
+  it("is deployed", async () => {
+    expect(storage).to.be.an("object")
+  })
+
+  it("can get a value", async () => {
+    expect(storage.get).to.be.a("function")
+
+    const value = await storage.get()
+
+    assert.equal(value, 0, "initial value should be 0")
+  })
+
+  it("can set a value", async () => {
+    expect(storage.set).to.be.a("function")
+
+    const expectedValue = 100
+    await storage.set(expectedValue)
+    const actualValue = await storage.get()
+
+    assert.equal(expectedValue, actualValue, `set value should be ${100}`)
   })
 })
