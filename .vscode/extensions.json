@@ -3,6 +3,7 @@
     "JuanBlanco.solidity",
     "chunsen.bracket-select",
     "mike-co.import-sorter",
-    "wmaurer.change-case"
+    "wmaurer.change-case",
+    "BriteSnow.vscode-toggle-quotes"
   ]
 }
