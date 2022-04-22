@@ -25,7 +25,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/AddressStorage.sol\":\"AddressStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/AddressStorage.sol\":{\"keccak256\":\"0xfedcc42e95c8625f1a7e94b2a3cb3c8e72a1e0c7376c91dc9af99d86b1d12a21\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e0945bba87955a1eb34aa8361b7d36b35ba84b68c2d178f2e2b43d208d02780e\",\"dweb:/ipfs/QmTEPi95RcNwYEGRZPEBL1d6Gv3YH4wCg5iwbYkV8txkL3\"]}},\"version\":1}",
@@ -1108,12 +1109,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x16F64B478bC14664c8Ea718086De6d8ae8FABB00",
-      "transactionHash": "0xa00ba922b28649cf83de9d08df09cf65d4c1e4a061ab87011e547f0af5c111a0"
+      "address": "0x7A46E140cE8d9EFaEfAC10266c924C1EcD18f271",
+      "transactionHash": "0x90bff9085e0739e92cb6bd0b4abd6ee13aa7bb2e1edfe40cd3c8184bf37e558d"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-04-21T13:48:27.732Z",
+  "updatedAt": "2022-04-22T09:52:53.921Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

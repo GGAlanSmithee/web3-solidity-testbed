@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     <Example
       web3={web3}
       header="Address Storage Example"
-      subHeader="Sets abd gets a value from a smart contract store, given the current user"
+      subHeader="Sets and gets a value from a smart contract store, given the current user"
     >
       <div>Storage value: {storage.value}</div>
 

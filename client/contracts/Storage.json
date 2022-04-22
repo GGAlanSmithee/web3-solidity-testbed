@@ -25,7 +25,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"get\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"x\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Storage.sol\":\"Storage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Storage.sol\":{\"keccak256\":\"0x6eedf46a73f0ae5627aa24b25fff45f556a7439a09dc8514e031cd2d9e8bc4dd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dfc0e17cea582ba12528a234a435f2b2b9bcaa68b858c56db87ee30cefa6053\",\"dweb:/ipfs/QmYhLDLdcAsgXo2wzy5pdwdJGyKZrEMZxYqA39K9ReWS26\"]}},\"version\":1}",
@@ -1011,12 +1012,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x143bc09A18311CA366C5394241eE50752a475651",
-      "transactionHash": "0xe8cc7439c31bfb41a6828d8312a604b8224aada6948e62c6a4b8d7b6a6277256"
+      "address": "0xE237b38B89fE699C7988437BBC11c4f1D180FA76",
+      "transactionHash": "0x80316e74d94d9eeaa2a64c3519e6152a7922a18ec40952c7d6ae2ce05a3bc4fa"
     }
   },
   "schemaVersion": "3.4.7",
-  "updatedAt": "2022-04-21T13:48:27.764Z",
+  "updatedAt": "2022-04-22T09:52:52.411Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

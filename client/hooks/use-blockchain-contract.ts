@@ -63,8 +63,9 @@ const useBlockchainContract = (web3: Web3 | undefined, contractJson: Dictionary<
     () => ({
       call,
       send,
+      methods: contract?.methods,
     }),
-    [call, send]
+    [call, send, contract?.methods]
   )
 
   return methods
