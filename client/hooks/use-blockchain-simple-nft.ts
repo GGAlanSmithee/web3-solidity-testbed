@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react"
+import { useCallback, useEffect, useState } from "react"
 import Web3 from "web3"
 import SimpleNFT from "contracts/SimpleNFT.json"
 import { useBlockchainContract } from "./use-blockchain-contract"
@@ -9,13 +9,31 @@ const useBlockchainSimpleNft = (web3: Web3 | undefined) => {
   const contract = useBlockchainContract(web3, SimpleNFT)
 
   const [totalCount, setTotalCount] = useState<number>()
-  const [name, setName] = useState<string>()
+  const [allNfts, setAllNfts] = useState<number[]>([])
+  const [current, setCurrent] = useState<string>()
 
   useEffect(() => {
     if (!contract || !user) return
 
     contract.call("getTotalCount", user).then(setTotalCount)
   }, [contract, user])
+
+  useEffect(() => {
+    if (!user || !totalCount) return
+
+    if (allNfts.length === totalCount) return
+    ;(async () => {
+      const nfts = []
+
+      for (let i = 0; i < totalCount; ++i) {
+        const nft = await contract.call("dataEntries", user, i)
+
+        nfts.push(nft)
+      }
+
+      setAllNfts(nfts)
+    })()
+  }, [user, totalCount, contract, allNfts.length])
 
   const mint = useCallback(() => {
     if (!contract || !user) return
@@ -25,12 +43,13 @@ const useBlockchainSimpleNft = (web3: Web3 | undefined) => {
       user,
       () => {
         contract.call("getTotalCount", user).then(setTotalCount)
+        setCurrent("")
       },
-      name
+      current
     )
-  }, [user, name, contract])
+  }, [user, current, contract])
 
-  return { totalCount, name, setName, mint }
+  return { totalCount, current, setCurrent, mint, all: allNfts }
 }
 
 export { useBlockchainSimpleNft }

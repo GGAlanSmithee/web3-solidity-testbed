@@ -47,4 +47,13 @@ contract("SimpleNFT", function (accounts) {
       "account 2 should have a balance of 0 NFT"
     )
   })
+
+  it("can get an NFT by an index", async () => {
+    assert.equal("My NFT", await simpleNFT.dataEntries(0), 'The fetched NFT should be "My NFT"')
+    assert.equal(
+      "My other NFT",
+      await simpleNFT.dataEntries(1),
+      'The fetched NFT should be "My other NFT"'
+    )
+  })
 })
