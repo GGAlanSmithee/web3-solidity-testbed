@@ -2,8 +2,11 @@
 pragma solidity >=0.8.0 <0.9.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract SimpleNFT is ERC721 {
+    using Counters for Counters.Counter;
+
     address public owner = msg.sender;
 
     struct Data {
@@ -11,24 +14,21 @@ contract SimpleNFT is ERC721 {
     }
 
     Data[] public dataEntries;
-
-    mapping(string => bool) private _nameExists;
-    mapping(string => uint256) private _nameData;
+    Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("Simple NFT", "SNFT") {}
 
     function mint(string memory name) public {
-        require(!_nameExists[name], "name isn't unique");
-
         Data memory data = Data(name);
 
         dataEntries.push(data);
 
-        uint256 id = dataEntries.length - 1;
+        _safeMint(msg.sender, _tokenIdCounter.current());
 
-        _safeMint(msg.sender, id);
+        _tokenIdCounter.increment();
+    }
 
-        _nameData[name] = id;
-        _nameExists[name] = true;
+    function getTotalCount() public view returns (uint256) {
+        return _tokenIdCounter.current();
     }
 }

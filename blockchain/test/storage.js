@@ -1,5 +1,8 @@
 const Storage = artifacts.require("Storage")
 
+const { assert } = require("chai")
+require("chai").use(require("chai-as-promised")).should()
+
 contract("Storage", function (/* accounts */) {
   let storage
 
@@ -23,9 +26,14 @@ contract("Storage", function (/* accounts */) {
     expect(storage.set).to.be.a("function")
 
     const expectedValue = 100
+
     await storage.set(expectedValue)
     const actualValue = await storage.get()
 
     assert.equal(expectedValue, actualValue, `set value should be ${100}`)
+  })
+
+  it("cannot set an invalid value", async () => {
+    await storage.set("invalid type").should.be.rejected
   })
 })
