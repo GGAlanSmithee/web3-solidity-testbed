@@ -1,6 +1,7 @@
 import { useState, useEffect, PropsWithChildren } from "react"
 import Web3 from "web3"
 import { useBlockchainUser } from "hooks/use-blockchain-user"
+import Link from "next/link"
 
 interface Props {
   web3?: Web3
@@ -21,19 +22,21 @@ const Example = ({ children, web3, header, subHeader }: PropsWithChildren<Props>
 
   return (
     <>
-      <p className="absolute top-5 left-5">User: {user}</p>
+      <div className="absolute top-5 left-5">
+        <div>
+          <Link href="/">&#8592; Home</Link>
+        </div>
+        <div>User: {user}</div>
+        <div>{balance ? <div>Balance: {balance} ETH</div> : <div>Balance:</div>}</div>
+      </div>
 
       <div className="flex flex-col items-center w-screen h-screen pt-16">
-        <header className="py-8 text-center">
+        <header className="py-16 text-center">
           <p className="text-3xl">{header}</p>
           <p className="text-xl">{subHeader}</p>
         </header>
 
-        <main>
-          <div>{balance && <div className="text-lg">Balance: {balance} ETH</div>}</div>
-
-          {children}
-        </main>
+        <main className="mt-8">{children}</main>
       </div>
     </>
   )
