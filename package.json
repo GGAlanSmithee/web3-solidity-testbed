@@ -1,0 +1,22 @@
+{
+  "name": "hello-ethereum",
+  "version": "1.0.0",
+  "description": "A repository to test ideas, refresh my memory in regards to eth / web3 etc",
+  "main": "index.js",
+  "scripts": {
+    "blockchain:migrate": "npm run migrate --prefix ./blockchain",
+    "blockchain:migrate:reset": "npm run migrate:reset --prefix ./blockchain",
+    "blockchain:test": "npm run test --prefix ./blockchain",
+    "client:dev": "npm run dev --prefix ./client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GGAlanSmithee/web3-solidity-testbed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GGAlanSmithee/web3-solidity-testbed/issues"
+  },
+  "homepage": "https://github.com/GGAlanSmithee/web3-solidity-testbed#readme"
+}

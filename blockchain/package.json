@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "migrate": "truffle migrate",
+    "migrate:reset": "truffle migrate --reset",
+    "test": "truffle test"
   },
   "author": "",
   "license": "ISC",
