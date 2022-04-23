@@ -7,6 +7,8 @@
     "blockchain:migrate": "npm run migrate --prefix ./blockchain",
     "blockchain:migrate:reset": "npm run migrate:reset --prefix ./blockchain",
     "blockchain:test": "npm run test --prefix ./blockchain",
+    "blockchain:create:contract": "npm run create:contract --prefix ./blockchain",
+    "blockchain:create:test": "npm run create:test --prefix ./blockchain",
     "client:dev": "npm run dev --prefix ./client"
   },
   "repository": {

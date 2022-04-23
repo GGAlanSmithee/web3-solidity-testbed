@@ -56,4 +56,11 @@ contract("SimpleNFT", function (accounts) {
       'The fetched NFT should be "My other NFT"'
     )
   })
+
+  // NOTE(Alan): Should not need to test ERC-721 functionality
+  it("can transfer a NFT", async () => {
+    assert.equal(accounts[0], await simpleNFT.ownerOf(0))
+    await simpleNFT.safeTransferFrom(accounts[0], accounts[1], 0)
+    assert.equal(accounts[1], await simpleNFT.ownerOf(0))
+  })
 })

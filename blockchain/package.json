@@ -9,6 +9,8 @@
   "scripts": {
     "migrate": "truffle migrate",
     "migrate:reset": "truffle migrate --reset",
+    "create:contract": "truffle create contract",
+    "create:test": "truffle create test",
     "test": "truffle test"
   },
   "author": "",
