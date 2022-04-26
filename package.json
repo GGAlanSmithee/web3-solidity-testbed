@@ -4,10 +4,12 @@
   "description": "A repository to test ideas, refresh my memory in regards to eth / web3 etc",
   "main": "index.js",
   "scripts": {
+    "blockchain:compile": "npm run compile --prefix ./blockchain",
     "blockchain:migrate": "npm run migrate --prefix ./blockchain",
     "blockchain:migrate:reset": "npm run migrate:reset --prefix ./blockchain",
     "blockchain:test": "npm run test --prefix ./blockchain",
     "blockchain:create:contract": "npm run create:contract --prefix ./blockchain",
+    "blockchain:create:migration": "npm run create:migration --prefix ./blockchain",
     "blockchain:create:test": "npm run create:test --prefix ./blockchain",
     "client:dev": "npm run dev --prefix ./client"
   },

@@ -7,9 +7,11 @@
     "test": "test"
   },
   "scripts": {
+    "compile": "truffle compile",
     "migrate": "truffle migrate",
     "migrate:reset": "truffle migrate --reset",
     "create:contract": "truffle create contract",
+    "create:migration": "truffle create migration",
     "create:test": "truffle create test",
     "test": "truffle test"
   },
